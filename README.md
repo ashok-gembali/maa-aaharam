@@ -1,12 +1,14 @@
 # మా కుటుంబ ఆహార ప్రణాళిక (Family Diet Plan)
 
-Andhra-style Telugu 10-day family meal plan — morning/night tiffin, lunch with rice,
-kids' school boxes, homemade snack recipes, shopping lists, and nutrition notes.
+Andhra-style Telugu 10-day family meal plan — built with **MkDocs Material**.
+Tiffin mornings/nights, rice lunch, kids' school boxes, homemade snack recipes,
+shopping lists, nutrition notes. Search + dark mode + mobile nav.
 
-**Live site:** https://ashok-gembali.github.io/maa-aaharam/
+**Live:** https://ashok-gembali.github.io/maa-aaharam/
 
-## Edit & rebuild
-Source markdown is in `source/md/`. To regenerate the site:
+## Rebuild
 ```
-python3 source/build_site.py
+python3 -m venv .venv && ./.venv/bin/pip install -r _src/requirements.txt
+cd _src && ../.venv/bin/mkdocs build -d ../   # outputs site to repo root
 ```
+Source markdown lives in `_src/docs/`.

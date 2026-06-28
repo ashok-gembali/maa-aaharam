@@ -1,0 +1,76 @@
+site_name: మా కుటుంబ ఆహార ప్రణాళిక
+site_description: ఆంధ్ర శైలి 10 రోజుల కుటుంబ ఆహార ప్రణాళిక — టిఫిన్, భోజనం, స్కూల్ బాక్స్, రెసిపీలు
+docs_dir: docs
+site_dir: mksite
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Noto Sans Telugu
+    code: Noto Sans Telugu
+  icon:
+    logo: material/food-apple
+  favicon: https://fav.farm/🍽️
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-night
+        name: డార్క్ మోడ్
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-sunny
+        name: లైట్ మోడ్
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.tooltips
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - హోమ్: index.md
+  - పూర్తి మెనూ: menu.md
+  - రోజువారీ:
+      - రోజు 1 — సోమ: days/day-01.md
+      - రోజు 2 — మంగళ: days/day-02.md
+      - రోజు 3 — బుధ: days/day-03.md
+      - రోజు 4 — గురు: days/day-04.md
+      - రోజు 5 — శుక్ర: days/day-05.md
+      - రోజు 6 — శని: days/day-06.md
+      - రోజు 7 — ఆది: days/day-07.md
+      - రోజు 8 — సోమ: days/day-08.md
+      - రోజు 9 — మంగళ: days/day-09.md
+      - రోజు 10 — బుధ: days/day-10.md
+  - రెసిపీలు: recipes.md
+  - షాపింగ్:
+      - వారం 1 (రోజు 1–5): shopping-1.md
+      - వారం 2 (రోజు 6–10): shopping-2.md
+  - పోషకాహారం: nutrition.md
+  - సారాంశం: summary.md
