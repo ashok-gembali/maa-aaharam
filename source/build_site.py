@@ -21,8 +21,14 @@ TITLES = {
     "day-05": "🗓️ రోజు 5 — శుక్రవారం", "day-06": "🗓️ రోజు 6 — శనివారం",
     "day-07": "🗓️ రోజు 7 — ఆదివారం", "day-08": "🗓️ రోజు 8 — సోమవారం",
     "day-09": "🗓️ రోజు 9 — మంగళవారం", "day-10": "🗓️ రోజు 10 — బుధవారం",
+    "day-11": "🗓️ రోజు 11 — గురువారం", "day-12": "🗓️ రోజు 12 — శుక్రవారం",
+    "day-13": "🗓️ రోజు 13 — శనివారం", "day-14": "🗓️ రోజు 14 — ఆదివారం",
+    "day-15": "🗓️ రోజు 15 — సోమవారం", "day-16": "🗓️ రోజు 16 — మంగళవారం",
+    "day-17": "🗓️ రోజు 17 — బుధవారం", "day-18": "🗓️ రోజు 18 — గురువారం",
+    "day-19": "🗓️ రోజు 19 — శుక్రవారం", "day-20": "🗓️ రోజు 20 — శనివారం",
+    "day-21": "🗓️ రోజు 21 — ఆదివారం",
     "snacks-recipes": "🍪 స్నాక్ రెసిపీలు", "shopping-week-1": "🛒 షాపింగ్ — వారం 1",
-    "shopping-week-2": "🛒 షాపింగ్ — వారం 2",
+    "shopping-week-2": "🛒 షాపింగ్ — వారం 2", "shopping-week-3": "🛒 షాపింగ్ — వారం 3",
     "nutrition-supplements": "🩺 పోషకాహారం & సప్లిమెంట్లు", "plan-summary": "📑 సారాంశం",
 }
 ORDER = list(TITLES.keys())
@@ -31,7 +37,10 @@ ORDER = list(TITLES.keys())
 DAYS = [
     (1, "సోమ", "veg"), (2, "మంగళ", "nonveg"), (3, "బుధ", "nonveg"), (4, "గురు", "veg"),
     (5, "శుక్ర", "veg"), (6, "శని", "veg"), (7, "ఆది", "nonveg"), (8, "సోమ", "veg"),
-    (9, "మంగళ", "nonveg"), (10, "బుధ", "nonveg"),
+    (9, "మంగళ", "nonveg"), (10, "బుధ", "nonveg"), (11, "గురు", "veg"), (12, "శుక్ర", "veg"),
+    (13, "శని", "veg"), (14, "ఆది", "nonveg"), (15, "సోమ", "veg"), (16, "మంగళ", "nonveg"),
+    (17, "బుధ", "nonveg"), (18, "గురు", "veg"), (19, "శుక్ర", "veg"), (20, "శని", "veg"),
+    (21, "ఆది", "nonveg"),
 ]
 
 
@@ -312,7 +321,7 @@ def day_pills(stem):
         return ""
     cur = int(stem.split("-")[1])
     pills = "".join(
-        f'<a href="day-{d:02d}.html" class="{"cur" if d==cur else ""}">{d}</a>' for d in range(1, 11)
+        f'<a href="day-{d:02d}.html" class="{"cur" if d==cur else ""}">{d}</a>' for d in range(1, 22)
     )
     return f'<div class="pills">{pills}</div>'
 
@@ -369,10 +378,10 @@ def build_index():
     )
     body = f"""
 <div class="hero"><h1>🍽️ మా కుటుంబ ఆహార ప్రణాళిక</h1>
-<p>ఆంధ్ర శైలి · 10 రోజులు · 4గురి కుటుంబం</p>
+<p>ఆంధ్ర శైలి · 21 రోజులు (3 వారాలు) · 4గురి కుటుంబం</p>
 <p>ఉదయం &amp; రాత్రి టిఫిన్ · మధ్యాహ్నం అన్నం · పిల్లల స్కూల్ బాక్స్‌తో సహా</p></div>
 
-<div class="section-title">🗓️ ఈ 10 రోజులు <span style="font-weight:500;color:#778;font-size:13px">(🟢 వెజ్ · 🔴 నాన్‌వెజ్)</span></div>
+<div class="section-title">🗓️ ఈ 21 రోజులు <span style="font-weight:500;color:#778;font-size:13px">(🟢 వెజ్ · 🔴 నాన్‌వెజ్)</span></div>
 <div class="week">{week}</div>
 
 <div class="cards">
@@ -385,6 +394,7 @@ def build_index():
 <a class="tile" href="snacks-recipes.html"><span class="ic">🍪</span><b>స్నాక్ రెసిపీలు</b><span>14 ఇంటి స్నాక్స్</span></a>
 <a class="tile" href="shopping-week-1.html"><span class="ic">🛒</span><b>షాపింగ్ 1</b><span>రోజు 1–5</span></a>
 <a class="tile" href="shopping-week-2.html"><span class="ic">🛒</span><b>షాపింగ్ 2</b><span>రోజు 6–10</span></a>
+<a class="tile" href="shopping-week-3.html"><span class="ic">🛒</span><b>షాపింగ్ 3</b><span>రోజు 11–21</span></a>
 </div>
 
 <div class="section-title">🩺 ఆరోగ్యం</div>
